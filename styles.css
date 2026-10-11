@@ -6,6 +6,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   max-width: 100vw;
   overflow-x: hidden;
@@ -18,9 +22,6 @@ nav {
 
 img {
   width: 100%;
-  height: 100%;
-  max-height: 50vh;
-  padding: 20px;
 }
 
 p {
@@ -143,7 +144,7 @@ button:active {
 
 .header__img--wrapper {
   padding: 20px;
-  z-index: 2;
+  z-index: 50;
 }
 
 .container {
@@ -185,13 +186,14 @@ HIGHLIGHTS
   top: 1px;
 }
 
-#highlights::after {
+#highlights:after {
   transform: translateY(100%) rotate(180deg);
   bottom: 1px;
 }
 
 .highlight__wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .highlight {
@@ -224,6 +226,7 @@ HIGHLIGHTS
 .highlight__subtitle {
   font-size: 20px;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 /*
@@ -239,6 +242,7 @@ FEATURES
 
 .books {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .book {
@@ -273,7 +277,7 @@ FEATURES
   cursor: not-allowed;
 }
 
-.book__rating {
+.book__ratings {
   margin-bottom: 8px;
   color: #fabf2a;
 }
@@ -282,5 +286,4 @@ FEATURES
   text-decoration: line-through;
   padding-right: 6px;
   color: #bfbfbf;
-
 }
